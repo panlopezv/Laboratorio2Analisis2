@@ -19,6 +19,8 @@ import javax.persistence.NamedQuery;
  * @author RealG4Life
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name="Libro.findNombreLike",query="Select l from Libro l where l.nombre LIKE :nombre")})
 public class Libro implements Serializable {
     @Id
     private int id;
