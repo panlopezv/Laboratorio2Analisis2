@@ -5,12 +5,18 @@
  */
 package laboratorio2;
 
+import java.util.List;
+import persistence.Autor;
+import persistence.Libro;
+
 /**
  *
  * @author EST1629311
  */
-public abstract class Despliegue {
-    protected ConexionEspecifica ce;
+public abstract class Despliegue  {
+    public ConexionEspecifica ce;
+    public List<Autor> Autores;
+    public List<Libro> Libros;
 
     public ConexionEspecifica getCe() {
         return ce;

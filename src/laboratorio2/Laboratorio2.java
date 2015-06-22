@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 package laboratorio2;
-
 /**
  *
  * @author EST1629311
  */
-public class Laboratorio2 {
-
+public class Laboratorio2 extends Despliegue{
+ 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
     }   
     
 }

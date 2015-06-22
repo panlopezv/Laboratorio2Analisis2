@@ -14,7 +14,8 @@ import javax.persistence.Persistence;
  * @author EST1629311
  */
 public abstract class Conexion {
-    private EntityManagerFactory emf;    
+    private EntityManagerFactory emf;
+   
     protected void iniciarConexion(String persistenceUnitName){
         emf = Persistence.createEntityManagerFactory(persistenceUnitName);
     }
