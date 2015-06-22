@@ -9,13 +9,15 @@ package laboratorio2;
  *
  * @author EST1629311
  */
-public class Laboratorio2 {
+public abstract class Despliegue {
+    protected ConexionEspecifica ce;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }   
+    public ConexionEspecifica getCe() {
+        return ce;
+    }
+
+    public void setCe(ConexionEspecifica ce) {
+        this.ce = ce;
+    }
     
 }
