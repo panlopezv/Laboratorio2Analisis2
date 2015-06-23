@@ -22,20 +22,22 @@ public class Autores extends Despliegue {
         autores=controlador.findAutorEntities();
     }
 
-    public AutorJpaController getControlador() {
-        return controlador;
-    }
-
-    public void setControlador(AutorJpaController controlador) {
-        this.controlador = controlador;
-    }
-
     public List<Autor> getAutores() {
         return autores;
     }
 
     public void setAutores(List<Autor> autores) {
         this.autores = autores;
+    }
+
+    @Override
+    public List<Autor> getLista() {
+        return autores;
+    }
+
+    @Override
+    public AutorJpaController getControlador() {
+        return controlador;
     }
     
     

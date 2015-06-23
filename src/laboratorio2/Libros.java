@@ -23,21 +23,23 @@ public class Libros extends Despliegue {
         this.controlador=controlador;
         libros=controlador.findLibroEntities();
     }
-
-    public LibroJpaController getControlador() {
-        return controlador;
-    }
-
-    public void setControlador(LibroJpaController controlador) {
-        this.controlador = controlador;
-    }
-
+    
     public List<Libro> getLibros() {
         return libros;
     }
 
     public void setLibros(List<Libro> libros) {
         this.libros = libros;
+    }
+
+    @Override
+    public List<Libro> getLista() {
+        return libros;
+    }
+
+    @Override
+    public LibroJpaController getControlador() {
+        return controlador;
     }
     
 }

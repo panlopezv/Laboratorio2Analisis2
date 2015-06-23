@@ -5,9 +5,13 @@
  */
 package laboratorio2;
 
+import java.util.List;
+
 /**
  *
  * @author EST1629311
  */
 public abstract class Despliegue  {   
+    public abstract Object getControlador();
+    public abstract Object getLista();
 }
