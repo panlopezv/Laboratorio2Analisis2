@@ -14,14 +14,10 @@ import controladores.LibroJpaController;
  */
 public class ConexionEspecifica extends Conexion{
     private static ConexionEspecifica unicaConexion;
-    private AutorJpaController controladorAutor;
-    private LibroJpaController controladorLibro;
 
   
     private ConexionEspecifica(String persistenceUnitName) {
         iniciarConexion(persistenceUnitName);  
-        controladorAutor=new AutorJpaController(getEmf());
-        controladorLibro= new LibroJpaController(getEmf());
     }
     
     public static ConexionEspecifica getConexionEspecifica(String persistenceUnitName){
@@ -30,20 +26,4 @@ public class ConexionEspecifica extends Conexion{
         }
         return unicaConexion;
     }
-      public AutorJpaController getControladorAutor() {
-        return controladorAutor;
-    }
-
-    public void setControladorAutor(AutorJpaController controladorAutor) {
-        this.controladorAutor = controladorAutor;
-    }
-
-    public LibroJpaController getControladorLibro() {
-        return controladorLibro;
-    }
-
-    public void setControladorLibro(LibroJpaController controladorLibro) {
-        this.controladorLibro = controladorLibro;
-    }
-    
 }

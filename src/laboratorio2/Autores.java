@@ -13,12 +13,31 @@ import persistence.Autor;
  *
  * @author EST1522712
  */
-public class Autores {
-    private AutorJpaController Controlador;
-    List<Autor> Autores;
+public class Autores extends Despliegue {
+    private AutorJpaController controlador;
+    private List<Autor> autores;
 
-    public Autores() {
+    public Autores(AutorJpaController controlador) {
+        this.controlador=controlador;
+        autores=controlador.findAutorEntities();
     }
+
+    public AutorJpaController getControlador() {
+        return controlador;
+    }
+
+    public void setControlador(AutorJpaController controlador) {
+        this.controlador = controlador;
+    }
+
+    public List<Autor> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(List<Autor> autores) {
+        this.autores = autores;
+    }
+    
     
     
 }

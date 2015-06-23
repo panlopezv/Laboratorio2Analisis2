@@ -15,14 +15,29 @@ import persistence.Libro;
  *
  * @author EST1522712
  */
-public class Libros {
-    private LibroJpaController Controlador;
-    List<Libro> Autores;
+public class Libros extends Despliegue {
+    private LibroJpaController controlador;
+    private List<Libro> libros;
 
-    public Libros() {
+    public Libros(LibroJpaController controlador) {
+        this.controlador=controlador;
+        libros=controlador.findLibroEntities();
     }
-    
-    
-    
+
+    public LibroJpaController getControlador() {
+        return controlador;
+    }
+
+    public void setControlador(LibroJpaController controlador) {
+        this.controlador = controlador;
+    }
+
+    public List<Libro> getLibros() {
+        return libros;
+    }
+
+    public void setLibros(List<Libro> libros) {
+        this.libros = libros;
+    }
     
 }
