@@ -9,12 +9,16 @@ package laboratorio2;
  * @author EST1629311
  */
 public class Laboratorio2 extends Despliegue{
- 
+    static ConexionEspecifica  conexion;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here}
+        conexion= ConexionEspecifica.getConexionEspecifica("Laboratorio2PU");
+        
+        
+        
         
     }   
     
